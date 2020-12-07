@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "246310442933",
+    "firebase_url": "https://negiwang-696b2.firebaseio.com",
+    "project_id": "negiwang-696b2",
+    "storage_bucket": "negiwang-696b2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246310442933:android:c659c80acf39f47b",
+        "android_client_info": {
+          "package_name": "com.negiwang.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246310442933-6i845jctqvog5khavlgtglh6277q84pn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDR0Hoi3wlmaF0Z0JfAqrOkzkzwaDgysX8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,102 @@
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.8.1'
+}
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.negiwang.android"
+
+        manifestPlaceholders = [onesignal_app_id               : "11fd84e7-ca21-4141-bcba-65c8d9330cff",
+                                onesignal_google_project_number: "246310442933"]
+
+
+
+        minSdkVersion 18
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    lintOptions {
+        disable 'MissingTranslation'
+    }
+
+    dexOptions {
+        //incremental true
+        jumboMode = true
+        preDexLibraries true
+        javaMaxHeapSize "4g"
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'http://devrepo.kakao.com:8088/nexus/content/groups/public/' }
+        maven { url 'https://maven.google.com' }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.google.android.gms:play-services:11.8.0'
+    implementation 'com.android.support:palette-v7:27.1.0'
+    implementation project(':lib')
+    def androidSupportVersion = '26.1.+'
+    implementation("com.android.support:support-v4:${androidSupportVersion}") {
+        force = true
+    }
+    implementation 'com.facebook.android:facebook-android-sdk:[4,5)'
+    implementation 'com.facebook.android:audience-network-sdk:4.+'
+    implementation 'com.github.bumptech.glide:glide:3.6.1'
+    implementation 'com.google.firebase:firebase-ads:11.8.0'
+    implementation 'com.google.firebase:firebase-core:11.8.0'
+    implementation 'jp.wasabeef:glide-transformations:2.0.1'
+    implementation 'com.onesignal:OneSignal:[3.6.5, 3.99.99]'
+    implementation 'com.google.android.gms:play-services-gcm:11.8.0'
+    implementation 'com.loopj.android:android-async-http:1.4.7'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+    implementation files('libs/volley.jar')
+    implementation files('libs/httpcore-4.3.3.jar')
+    implementation files('libs/httpmime-4.3.5.jar')
+    implementation 'junit:junit:4.12'
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation 'gun0912.ted:tedpermission:2.0.0'
+    implementation group: 'com.kakao.sdk', name: 'usermgmt', version: project.KAKAO_SDK_VERSION
+    implementation group: 'com.kakao.sdk', name: 'kakaolink', version: project.KAKAO_SDK_VERSION
+    implementation group: 'com.kakao.sdk', name: 'kakaotalk', version: project.KAKAO_SDK_VERSION
+    implementation group: 'com.kakao.sdk', name: 'kakaostory', version: project.KAKAO_SDK_VERSION
+}
+
+apply plugin: 'com.google.gms.google-services'

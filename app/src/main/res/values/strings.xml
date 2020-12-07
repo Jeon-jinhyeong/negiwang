@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">내기왕</string>
+
+    <!--<string name="Domain_url">http://orangeapp.co.kr/hp/citytalk/</string>-->
+    L<!--<string name="Domain_url">http://orangeapp.co.kr/sir2/</string>-->
+    <string name="Domain_url">http://negiwang.com/app/</string>
+
+
+    <!-- 카카오 키값 -->
+    <string name="kakao_app_key">a35e3d52132410582eb6303ffdf27d92</string>
+    <string name="kakao_scheme">kakaoa35e3d52132410582eb6303ffdf27d92</string>
+    <string name="short_scheme">shorta35e3d52132410582eb6303ffdf27d92</string>
+
+    <!-- 페북 키값 -->
+    <string name="facebook_app_id">349369915577458</string>
+    <string name="fb_login_protocol_scheme">fb349369915577458</string>
+
+
+</resources>

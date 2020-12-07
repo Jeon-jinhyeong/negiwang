@@ -1,0 +1,68 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+
+    </style>
+
+    <style name="Theme.AppCompat.Translucent">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
+
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#ededed</item>
+        <item name="colorControlActivated">#c44c40</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+    <style name="My.Dialog.Theme_full" parent="@android:style/Theme.Holo.DialogWhenLarge.NoActionBar">
+        <item name="android:background">#00000000</item>
+        <item name="android:padding">0dp</item>
+        <item name="android:layout_margin">0dp</item>
+
+    </style>
+    <style name="My.Dialog.Theme" parent="@android:style/Theme.DeviceDefault.Light.Dialog.NoActionBar">
+        <item name="android:background">#00000000</item>
+        <item name="android:padding">0dp</item>:
+
+        <item name="android:layout_margin">0dp</item>
+
+    </style>
+    <style name="MyThemedDialog_full" parent="@style/My.Dialog.Theme_full"></style>
+    <style name="MyThemedDialog" parent="@style/My.Dialog.Theme"></style>
+    <style name="style_Spinner">
+
+        <item name="android:dropDownSelector">@android:color/transparent</item>
+        <item name="android:popupBackground">#2c91d7</item>
+        <item name="android:spinnerMode">dropdown</item>
+
+    </style>
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+</resources>
